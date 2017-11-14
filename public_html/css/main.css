@@ -1,0 +1,81 @@
+body {
+    font-family: "Open Sans", sans-serif; }
+
+h1 {
+    color: blue;
+    weight: 300; 
+    visibility: hidden;
+}
+
+#p1,#p2{
+    visibility: hidden;
+}
+
+figure {
+    margin-left: auto; }
+
+.content article {
+    padding: 70px 0 !important;
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center; }
+
+img {
+    max-width: 100%; }
+
+.tetris-box {
+    position: relative;
+    height: 600px;
+    background-image: url(../images/header/back.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed; 
+    overflow: hidden;
+}
+
+.t-heart {
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/header/heart.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute; }
+
+.i-block {
+    height: 100%;
+    width: 707px;
+    background-image: url(../images/header/palito-frente.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-top: 30%;
+    margin-left: 14%;
+}
+
+.v-block{
+    width: 100%;
+    height: 386px;
+    background-image: url(../images/header/v-back.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: absolute;
+    right: 50%;
+    margin-right: -60%;
+}
+
+#img1{
+    width: 500px;
+}
+
+#tetrispng{
+    background-image: url(../images/header/back.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    max-width: 100%;
+}
+
+footer{
+    background-image: url(../images/footer.png);
+    max-width: 100%;
+}
+
+/*# sourceMappingURL=main.css.map */

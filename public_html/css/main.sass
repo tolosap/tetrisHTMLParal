@@ -1,0 +1,65 @@
+//Base styles
+
+body
+  font-family: "Open Sans", sans-serif
+
+h1
+  color: #ccc
+  weight: 300
+
+figure
+  margin-left: auto
+
+.content
+  article
+    padding: 100px 0
+    max-width: 640px
+    margin: 0 auto
+    text-align: center
+
+img
+  max-width: 100%
+
+
+
+//  Parallax
+.tetris-box
+  position: relative
+  height: 600px
+  background:
+    image: url(../images/header/bg.png)
+    size: auto 600px
+    position: top center
+    attachment: fixed
+
+.t-heart
+  height: 100%
+  width: 100%
+  background:
+    //color: pink
+    image: url(../images/header/heart.png)
+    position: center
+    repeat: no-repeat
+  position: absolute
+  //top: 50%
+//  margin-top: -50%
+
+.i-block
+  height: 100%
+  width: 100%
+  background:
+    //color: pink
+    image: url(../images/header/palito-frente.png)
+    //position: center
+    repeat: no-repeat
+  position: absolute
+
+.v-block
+  height: 100px
+  width: 100px
+  background:
+    color: transparentize(pink, 0.3)
+    image: url(../images/header/v-back.png)
+    repeat: no-repeat
+    position: center
+  position: absolute

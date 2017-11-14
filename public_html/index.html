@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <!-- Basic Page Needs
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta charset="utf-8">
+        <title>Tetris</title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Mobile Specific Metas
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- FONT
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+        <!-- CSS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/skeleton.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href="css/animate.css" rel="stylesheet" type="text/css"/>
+        <!-- Favicon
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link rel="icon" type="image/png" href="images/favicon.png">
+
+    </head>
+    <body>
+
+        <!-- Primary Page Layout
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <!---<div class="container">
+          <div class="row">
+            <div class="one-half column" style="margin-top: 25%">
+              <h4>Basic Page</h4>
+              <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+            </div>
+          </div>
+        </div>-->
+        <header class="tetris-box">
+            <div class="t-heart">
+            </div>
+            <div class="i-block">
+            </div>
+            <div class="v-block">
+            </div>
+        </header>
+
+        <section class="content">
+            <article>
+                <div>
+                    <h1>TETRIS</h1>
+                    <hr>
+                    <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc
+                        itation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint o
+                        ccaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </article>
+            <article>
+                <div class="container">
+                    <h2>HISTORIA</h2>
+                    <hr>
+                    <p id="p2">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc
+                        itation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint o
+                        ccaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </article>
+            <article id="tetrispng">
+                <div class="container">
+                    <img src="images/Tetris.png" id="img1">
+                </div>
+            </article>
+            <article>
+                <div class="container">
+                    <h2>RUSIA ES EL ORIGEN</h2>
+                    <hr>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc
+                        itation ullamco laboris nisi ut SLAVA STALIN aliquip ex ea commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint o
+                        ccaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <img src="images/arcade.jpg" id="img2">
+                </div>
+            </article>
+            <!--<div style="height: 1000px">
+            </div>-->            
+        </section>
+        <footer>
+            <img src="images/footer.png">
+        </footer>
+        
+        <script>
+            $(window).scroll(function () {
+
+                var wScroll = $(window).scrollTop();
+                
+                console.log(wScroll);
+                
+                $(".t-heart").css({
+                    'transform': 'translate(0px, ' + wScroll / 7 + '%)'
+                });
+
+                $(".i-block").css({
+                    'transform': 'translate(0px, -' + wScroll / 9 + '%)'
+                });
+
+                $(".v-block").css({
+                    'transform': 'translate(0px, ' + wScroll / 2.5 + '%)'
+                });
+
+                if (wScroll >= 300) {
+                    $("h1").css({'visibility': 'visible', 'animation-duration': '1s'}).addClass('animated fadeInLeft');
+                    $("#p1").css({'visibility': 'visible', 'animation-duration': '1s'}).addClass('animated flipInX');
+                }
+                if (wScroll >= 900) {
+                    $("#p2").css({'visibility': 'visible', 'animation-duration': '2s'}).addClass('animated bounceIn');
+                }
+                if (wScroll >= 1200) {
+                    $("#img1").addClass('animated bounce');
+                }
+
+            });
+            $("#img2").hover(function(){
+                $("#img2").addClass('animated pulse');
+                $("#img2").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+                    $("#img2").removeClass('animated pulse');
+                });                
+            });
+        </script>
+
+        <!-- End Document
+          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    </body>
+</html>
